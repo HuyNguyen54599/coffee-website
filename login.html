@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes Coffee</title>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- Grid css -->
+    <link rel="stylesheet" href="css/grid.css">
+    <!-- Scroll animation -->
+    <link rel="stylesheet" href="css/scrollAnimation.css">
+
+</head>
+
+<body>
+    <a href="index.html" class="back-to-home right-to show-el-effect"><i class="fas fa-arrow-left"></i> HOME</a>
+
+    <section>
+        <div class="form-container">
+            <h2 class="form-header">user<span>login</span></h2>
+            <div class="form-img top-to show-el-effect">
+                <img src="image/ceb2da9e5d053cfabbd211d2557bec15.jpg" alt="">
+            </div>
+            <div class="form bottom-to show-el-effect" id="signin-form">
+                <div class="form-group form-group-name">
+                    <label for="user-name" class="form-label">Username</label>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="user-name" name="user-name" placeholder="Type your username">
+                    </div>
+                    <span class="form-message" data-err-for="user-name">* Error message</span>
+                </div>
+                <div class="form-group form-group-pass">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="text" id="password" name="password" placeholder="Type your password">
+                    </div>
+                    <span class="form-message" data-err-for="password">* Error message</span>
+                </div>
+                <a href="#" class="forget-pass ">Forgot password?</a>
+                <div class="form-group-accept">
+                    <input type="checkbox" id="accept-check">
+                    <label for="accept-check">
+                        I have read and accept the
+                        <a href="#" class="link-text-form">Terms of Use</a>
+                        and
+                        <a href="#" class="link-text-form">Privacy Policy</a>
+                    </label>
+                </div>
+                <button class="form-submit-signin">log in</button>
+                <p class="using-title">Or Sign up Using</p>
+                <ul class="sign-use">
+                    <a href="#" class="use-item">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="use-item">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="use-item">
+                        <i class="fab fa-invision"></i>
+                    </a>
+                </ul>
+                <div class="form-register">
+                    Don't have an account yet?
+                    <i class="fas fa-arrow-right"></i>
+                    <a href="newaccount.html" class="link-text-form">Register </a>
+                    a new account
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign in JS -->
+    <script src="js/signin.js"></script>
+    <script src="js/scrollAnimation.js"></script>
+</body>
+
+</html>

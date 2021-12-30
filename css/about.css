@@ -1,0 +1,418 @@
+/* setup all */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: OswaldExtraLight;
+    src: url(../font/Oswald-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: OswaldLight;
+    src: url(../font/Oswald-Light.ttf);
+}
+
+@font-face {
+    font-family: OswaldRegular;
+    src: url(../font/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: OswaldMedium;
+    src: url(../font/Oswald-Medium.ttf);
+}
+
+@font-face {
+    font-family: OswaldSemiBold;
+    src: url(../font/Oswald-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: OswaldBold;
+    src: url(../font/Oswald-Bold.ttf);
+}
+
+@font-face {
+    font-family: PacificoRegular;
+    src: url(../font/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: TheBraggest;
+    src: url(../font/The\ Braggest_Demo.ttf);
+}
+
+:root {
+    --main-color: #FFC139;
+    --secondary-color: #FFEFDE;
+    --txt-color: #000000;
+    --txt-white: #ffffff;
+
+    --header-height: 145px;
+    --header-padding: 20px 80px;
+    --sm-md-header-logo-- : 5rem;
+    --sm-md-header-height--: 60px;
+}
+
+
+/* welcome */
+.welcome {
+    margin-top: calc(var(--sm-md-header-height--) + var(--header-height));
+    width: 100%;
+    height: 38rem;
+    background-image: url(../image/aboutbgfirst.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.welcome-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.welcome-title {
+    font-family: OswaldLight;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    text-indent: 3px;
+    text-transform: uppercase;
+}
+
+.welcome-des {
+    font-family: OswaldLight;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin: 2.5rem 0 3rem;
+}
+
+.welcome-btn {
+    font-family: OswaldRegular;
+    font-size: 1.7rem;
+    letter-spacing: 5px;
+    text-indent: 5px;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    padding: .8rem 1.5rem;
+    border-radius: 1rem;
+    transition: .3s;
+}
+
+.welcome-btn:hover {
+    background-color: #ffd342;
+    color: var(--txt-white);
+}
+/* end welcome */
+
+
+/* statistic */
+.statistic {
+    padding-top: var(--sm-md-header-height--);
+    padding-bottom: var(--sm-md-header-height--);
+}
+
+.statistic-list {
+    text-align: center;
+}
+
+.statistic-item-count {
+    font-family: OswaldExtraLight;
+    font-size: 4rem;
+    letter-spacing: 7px;
+    text-indent: 7px;
+    color: #808080;
+}
+
+.statistic-item-title {
+    font-family: OswaldRegular;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-indent: 4px;
+    padding: 1rem 0 2rem;
+}
+
+.statistic-item i {
+    font-size: 6rem;
+    color: #454545;
+}
+/* end statistic */
+
+
+/* feedback */
+.feedback-content {
+    align-items: center;
+}
+
+.feedback {
+    background-color: var(--secondary-color);
+    padding: 5rem 0;
+}
+
+.feedback-img {
+    object-fit: cover;
+}
+
+.top-text {
+    font-family: OswaldLight;
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    text-indent: 3px;
+    text-transform: uppercase;
+}
+
+.feedback-slogan {
+    font-family: OswaldLight;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin: 1rem 0 4.5rem;
+    color: #643F2C;
+    letter-spacing: 4px;
+    word-spacing: 3px;
+}
+
+.feedback-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.feedback-item img {
+    height: 4.5rem;
+}
+
+.feedback-item-content {
+    font-family: 'Montserrat', sans-serif;
+    color: #534741;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.feedback-item-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.feedback-item-des {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.feedback-btn {
+    font-family: OswaldLight;
+    font-size: 1.6rem;
+    letter-spacing: 7px;
+    text-indent: 7px;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    color: var(--txt-white);
+    background-color: #955B3E;
+    border-radius: .5rem;
+    margin-top: 4rem;
+    transition: .3s;
+}
+
+.feedback-btn:hover {
+    background-color: #724630;
+}
+/* end feedback */
+
+
+/* gallery */
+.gallery {
+    padding-top: 8rem;
+}
+
+.gallery-intro {
+    margin-bottom: 3.5rem;
+}
+
+.gallery-intro-ques {
+    font-family: OswaldExtraLight;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-indent: 3px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.gallery-intro-sup {
+    font-family: OswaldLight;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    width: 55%;
+}
+
+.gallery-item {
+    width: 100%;
+    position: relative;
+    height: 26rem;
+    margin-bottom: 3rem!important;
+    cursor: pointer;
+}
+
+.gallery-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 0;
+    background-color: #000000;
+    opacity: .5;
+    z-index: 1;
+}
+
+.gallery-item-content {
+    padding: 1rem 0;
+    font-family: OswaldExtraLight;
+    font-size: 2.8rem;
+    letter-spacing: 1rem;
+    text-indent: 1rem;
+    text-transform: uppercase;
+    color: var(--txt-white);
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    transition:  visibility .4s;
+    transition-delay: .2s;
+}
+
+.gallery-item-content::before,
+.gallery-item-content::after {
+    content: "";
+    display: block;
+    height: 1.5px;
+    width: 70%;
+    background-color: var(--txt-white);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform .4s ease-out, visibility .2s ;
+}
+
+.gallery-item-content::before {
+    top: 0;
+}
+
+.gallery-item-content::after {
+    bottom: 0;
+}
+
+.gallery-item{
+    overflow: hidden;
+}
+
+.gallery-item:hover  img {
+    transform: scale(1.2);
+}
+
+.gallery-item:hover .gallery-item-content::before {
+    transform: translate(-50%, -200px);
+    visibility: hidden;
+}
+
+.gallery-item:hover .gallery-item-content::after {
+    transform: translate(-50%, 200px);
+    visibility: hidden;
+}
+
+.gallery-item:hover .gallery-item-content {
+    visibility: hidden;
+}
+/* end gallery */
+
+
+/* responsive */
+@media only screen and (max-width: 1280px) {
+    /* welcome */
+    .welcome {
+        margin-top: var(--sm-md-header-height--);
+    }
+
+    .welcome-content {
+        width: 80%;
+    }
+
+    .welcome-title {
+        font-size: 2.5rem;
+    }
+
+    .welcome-des {
+        font-size: 1.4rem;
+        margin: 1.5rem 0 2.5rem ;
+    }
+
+    .welcome-btn {
+        font-size: 1.5rem;
+        padding: .5rem 1rem;
+    }
+
+    /* statistic */
+    .statistic {
+        padding-top: 0;
+    }
+
+    .statistic-item-count {
+        font-size: 2.8rem;
+    }
+
+    .statistic-item-title {
+        font-size: 1.5rem;
+    }
+    
+    .statistic-item i {
+        font-size: 5rem;
+    }
+
+    /* feedback */
+    .top-text {
+        font-size: 1.8rem;
+    }
+
+    .feedback-slogan {
+        font-size: 3rem;
+    }
+
+    .feedback-btn {
+        font-size: 1.5rem;
+        padding: .8rem 2rem;
+    }
+
+    /* gallery */
+    .gallery-intro-ques {
+        font-size: 2.5rem;
+    }
+
+    .gallery-intro-sup {
+        width: 85%;
+        font-size: 1.5rem;
+    }
+
+    .gallery-item-content {
+        font-size: 2.2rem;
+    }
+}
+/* end responsive */

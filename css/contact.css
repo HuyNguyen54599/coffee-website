@@ -1,0 +1,296 @@
+/* setup all */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: OswaldExtraLight;
+    src: url(../font/Oswald-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: OswaldLight;
+    src: url(../font/Oswald-Light.ttf);
+}
+
+@font-face {
+    font-family: OswaldRegular;
+    src: url(../font/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: OswaldMedium;
+    src: url(../font/Oswald-Medium.ttf);
+}
+
+@font-face {
+    font-family: OswaldSemiBold;
+    src: url(../font/Oswald-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: OswaldBold;
+    src: url(../font/Oswald-Bold.ttf);
+}
+
+@font-face {
+    font-family: PacificoRegular;
+    src: url(../font/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: TheBraggest;
+    src: url(../font/The\ Braggest_Demo.ttf);
+}
+
+:root {
+    --main-color: #FFC139;
+    --secondary-color: #FFEFDE;
+    --txt-color: #000000;
+    --txt-white: #ffffff;
+
+    --header-height: 145px;
+    --header-padding: 20px 80px;
+    --sm-md-header-logo-- : 5rem;
+    --sm-md-header-height--: 60px;
+}
+
+
+
+
+
+/* store */
+.store {
+    background-color: var(--secondary-color);
+    padding-top: var(--header-height);
+    padding-bottom: 3rem;
+}
+
+.store-address {
+    align-items: center;
+}
+
+.store-map iframe {
+    display: block;
+    height: 60rem;
+    width: 100%;
+    box-shadow: 0 0 3rem 2px rgba(0, 0, 0, .3);
+}
+
+.store-place {
+    position: relative;
+    height: 60rem;
+}
+
+.vertical-line {
+    height: 85%;
+    width: 4px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.store-place-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.store-place-item {
+    width: 50%;
+}
+
+.store-place-item a {
+    display: block;
+    width: 100%;
+    transform: translateX(1.6rem);
+}
+
+.store-place-item:nth-child(2n) a {
+    transform: translateX(-1.6rem);
+}
+
+.store-place-item .store-place-detail {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.store-place-item:nth-child(2n) .store-place-detail {
+    flex-direction: row-reverse;
+    left: 100%;
+}
+
+.store-place-name {
+    font-family: OswaldLight;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: var(--main-color);
+    margin-bottom: .5rem;
+}
+
+.store-detail-des {
+    font-family: OswaldLight;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    width: 14rem;
+}
+
+.store-place-item .fa-map-marker-alt {
+    font-size: 1.6rem;
+    color: #75CFF0;
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.25);
+    transition: .3s;
+}
+
+.store-place-item:nth-child(2n) .fa-map-marker-alt {
+    margin-right: 1.5rem;
+}
+
+.place-detail-img {
+    height: 3rem;
+    width: 10.5rem;
+    background-image: url(../image/figmamap.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+
+.store-place-item .store-detail-content{
+    transition: .3s;
+}
+
+.store-place-item:nth-child(2n) .place-detail-img {
+    transform: scale(-1);
+}
+
+.store-place-item a:hover .store-detail-content {
+    text-shadow: -2rem 1rem 1px rgba(0, 0, 0, 0.25);
+    transform: translateX(-1.5rem);
+}
+
+.store-place-item:nth-child(2n) a:hover .store-detail-content {
+    text-shadow: 2rem 1rem 1px rgba(0, 0, 0, 0.25);
+    transform: translateX(1.5rem);
+}
+
+.store-place-item a:hover i {
+    transform: scale(2.5);
+    z-index: 2;
+}
+/* end store */
+
+
+/* contact */
+.main-contact {
+    padding: 8rem 0 10rem;
+}
+
+.head-contact h3 {
+    font-family: OswaldLight;
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+}
+
+.head-contact p {
+    font-family: OswaldLight;
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+    margin: 1rem auto 0;
+}
+
+.head-contact {
+    margin-bottom: 5rem;
+}
+
+.contact-img img{
+    width: 100%;
+    height: 45rem;
+    object-fit: cover;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-submit:focus {
+    outline: none;
+}
+
+.contact-form input,
+.contact-form textarea{
+    display: inline-block;
+    border: none;
+    font-family: OswaldLight;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    margin-bottom: 2.5rem;
+    color: #858585;
+    background-color: #EBEBEB;
+}
+
+.contact-full-name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-firstname,
+.contact-lastname {
+    width: 48%;
+}
+
+.contact-email,
+.contact-area {
+    width: 100%;
+}
+
+.contact-form textarea {
+    height: 16rem;
+}
+
+.contact-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: OswaldRegular;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    border-radius: 2rem;
+    background-color: #ffd13b;
+    color: var(--txt-white);
+    transition: .3s;
+}
+
+.contact-submit:hover {
+    color: var(--txt-color);
+    background-color: var(--main-color);
+}
+/* end contact */
+
+
+/* responsive */
+@media only screen and (max-width: 1280px) {
+    .store {
+        padding-top: var(--sm-md-header-height--);
+    }
+}

@@ -1,0 +1,913 @@
+/* setup all */
+@font-face {
+    font-family: OswaldExtraLight;
+    src: url(../font/Oswald-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: OswaldLight;
+    src: url(../font/Oswald-Light.ttf);
+}
+
+@font-face {
+    font-family: OswaldRegular;
+    src: url(../font/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: OswaldMedium;
+    src: url(../font/Oswald-Medium.ttf);
+}
+
+@font-face {
+    font-family: OswaldSemiBold;
+    src: url(../font/Oswald-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: OswaldBold;
+    src: url(../font/Oswald-Bold.ttf);
+}
+
+@font-face {
+    font-family: PacificoRegular;
+    src: url(../font/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: TheBraggest;
+    src: url(../font/The\ Braggest_Demo.ttf);
+}
+
+:root {
+    --main-color: #FFC139;
+    --secondary-color: #FFEFDE;
+    --txt-color: #000000;
+    --txt-white: #ffffff;
+
+    --header-height: 145px;
+    --header-padding: 20px 80px;
+    --sm-md-header-logo-- : 5rem;
+    --sm-md-header-height--: 60px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--txt-color);
+    font-family: OswaldLight;
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* container component */
+.container {
+    max-width: 1366px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+
+/* booking info */
+.booking {
+    background-color: var(--secondary-color);
+    padding-top: calc(var(--header-height) + var(--sm-md-header-height--));
+    padding-bottom: var(--sm-md-header-height--);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: .3rem;
+    margin-bottom: 4rem!important;
+}
+
+.wrraper-select {
+    width: 100%;
+    position: relative;
+}
+
+.form-group select {
+    width: 100%;
+    appearance: none;
+    border: none;
+    padding: 1.1rem 1.5rem;
+    text-align-last: center;
+}
+
+.form-group select:focus {
+    outline: none;
+}
+
+.wrraper-select::after {
+    display: inline-block;
+    height: 1rem;
+    line-height: 1rem;
+    font-family: "Font Awesome 5 Free";
+    content: '\f0d7';
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--txt-color);
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+
+#customer-infomation {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.2rem 1.5rem;
+    letter-spacing: 2px;
+}
+
+.form-group input {
+    padding: 1.1rem 1.5rem;
+    border: none;
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+.form-group input,
+.form-group select {
+    font-family: OswaldRegular;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    border-radius: .5rem;
+    border: 1px solid var(--txt-white);
+    box-shadow: -2px 2px 5rem 0 rgba(0, 0, 0, .1);
+}
+
+.form-group label {
+    font-family: OswaldRegular;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.error-message {
+    font-family: OswaldRegular;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    display: none;
+}
+
+.form-group.error .error-message {
+    display: block;
+    color: #FF5555;
+}
+
+.form-group.success .error-message {
+    display: none;
+}
+
+.form-group.error input,
+.form-group.error select {
+    border: 1px solid #ffbdbd;
+}
+
+.form-group.success input,
+.form-group.success select {
+    border: 1px solid var(--txt-white);
+}
+
+.step-clear {
+    display: flex;
+    justify-content: space-between;
+}
+
+.step-clear-btn {
+    width: 14rem;
+    height: 4rem;
+    display: grid;
+    place-items: center;
+    color: var(--txt-white);
+    font-family: OswaldRegular;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-indent: 5px;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.step-btn {
+    background-color: #555555;
+}
+
+.clear-btn {
+    background-color: #ffd342;
+}
+
+.step-btn:hover {
+    background-color: var(--txt-color);
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+
+.clear-btn:hover {
+    background-color: var(--main-color);
+    color: var(--txt-color);
+    transform: scale(1.1);
+}
+/* end booking info */
+
+
+/* line booking step */
+.step-line {
+    position: relative;
+    margin: 8rem 0;
+    display: none;
+}
+
+.step-process-line {
+    display: flex;
+    align-items: center;
+}
+
+.line-bg-process {
+    width: 33.33%;
+    height: .6rem;
+    background-color: #EDEDED;
+}
+
+.step-process-number {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.number-bg-process {
+    width: 3.7rem;
+    height: 3.7rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 2px solid #EDEDED;
+    background-color: #EDEDED;
+    font-family: OswaldRegular;
+    font-size: 1.3rem;
+}
+
+.line-bg-process.step-done {
+    background-color: var(--main-color);
+}
+
+.number-bg-process.waiting {
+    border: 6px solid var(--main-color);
+    background-color: #EDEDED;
+}
+
+.number-bg-process.cus-done {
+    border: 6px solid var(--main-color);
+    background-color: var(--main-color);
+}
+/* end line booking step */
+
+
+/* booking seat step */
+.booking-seat {
+    padding: 5rem 0 15rem;
+}
+
+.booking-box{
+    background-color: var(--main-color);
+    border-radius: 1rem;
+    height: 50rem;
+    position: relative;
+}
+
+.wrapper-booking {
+    position: absolute;
+    top: 50%;
+    left: 2.5rem;
+    right: 2.5rem;
+    transform: translateY(-50%);
+}
+
+.seat-grid {
+    align-items: center;
+}
+
+.booking-seat-screen {
+    height: 56rem;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5rem;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.booking-header-text {
+    font-family: OswaldLight;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    text-indent: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.booking-seat-slider {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .25);
+    padding: 1rem 2.5rem 2rem;
+    position: relative;
+}
+
+.slide-container {
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide-list {
+    height: 100%;
+    width: 200%;
+    display: flex;
+    transition: .5s;
+}
+
+.slide-item {
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slide-item-upfloor {
+    padding: 0 2rem;
+}
+
+.floor-text {
+    text-align: center;
+    letter-spacing: 1px;
+    text-indent: 1px;
+    font-size: 1.6rem;
+    font-family: OswaldLight;
+}
+
+.slide-item-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seat-pick {
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    border-radius: 1rem;
+    font-family: OswaldLight;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.seat-pick.empty-seat {
+    background-color: #C6ECFF;
+    border: 1px solid #6BBEFF;
+}
+
+.seat-pick.reserved-seat {
+    border: 1px solid #A6ACB2;
+    background-color: #C0C6CC;
+    pointer-events: none;
+}
+
+.seat-pick.selected-seat {
+    border: 1px solid #FF9371;
+    background-color: #FFCBBA;
+}
+
+.booking-seat-slider .fa-arrow-left,
+.booking-seat-slider .fa-arrow-right {
+    background-color: rgba(0, 0, 0, .3);
+    color: var(--txt-white);
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 50%;
+}
+
+.booking-seat-slider .fa-arrow-left {
+    left: 0;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+}
+
+.booking-seat-slider .fa-arrow-right {
+    right: 0;
+    transform: translate(50%, -50%);
+    transition: .3s;
+}
+
+.booking-seat-slider .fa-arrow-left:hover{
+    transform: translate(-80%, -50%) scale(1.2);
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.booking-seat-slider .fa-arrow-right:hover{
+    transform: translate(80%, -50%) scale(1.2);
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.booking-seat-form,
+.payment-form {
+    background-color: var(--main-color);
+    border-radius: 1rem;
+}
+
+.seat-des {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seat-des-item span {
+    display: inline-block;
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: .8rem;
+    margin-right: 1rem;
+}
+
+.seat-des-item p {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.seat-des-empty span {
+    border: 1px solid #6BBEFF;
+    background-color: #C6ECFF;
+}
+
+.seat-des-reserved span {
+    border: 1px solid #A6ACB2;
+    background-color: #C0C6CC;
+}
+
+.seat-des-selected span {
+    border: 1px solid #FF9371;
+    background-color: #FFCBBA;
+}
+
+.seat-form-component,
+.payment-form-component {
+    padding: 3rem 0 0 ;
+}
+
+.confirm-step-btn {
+    width: 18rem;
+    height: 4rem;
+    display: grid;
+    place-items: center;
+    background-color: rgb(85, 85, 85);
+    color: var(--txt-white);
+    font-family: OswaldRegular;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-indent: 5px;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.confirm-step-btn:hover {
+    background-color: var(--txt-color);
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+
+.confirm-step-next {
+    margin: auto;
+}
+/* end booking seat step */
+
+
+/* check again */
+.check-again {
+    padding: 5rem 0 15rem;
+}
+
+.check-again-wrapper {
+    background-color: var(--secondary-color);
+    padding: 2.5rem;
+}
+
+.check-again-header {
+    font-family: OswaldRegular;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    text-indent: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2.5rem 0;
+    background-color: var(--main-color);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.main-check-again {
+    align-items: center;
+}
+
+.checkagain-clear-btn {
+    width: 14rem;
+    height: 4rem;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    color: var(--txt-white);
+    background-color: #ffd342;
+    font-family: OswaldRegular;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-indent: 5px;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.checkagain-clear-btn:hover {
+    background-color: var(--main-color);
+    color: var(--txt-color);
+    transform: scale(1.1);
+}
+
+.check-view-screen {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 5px 5px rgb(0 0 0 / 25%);
+    padding: 1.5rem;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.step-btn-box {
+    width: 100%;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.step-btn-box div {
+    margin: 0;
+}
+/* end check again */
+
+
+/* payment step */
+.payment {
+    padding: 5rem 0 15rem;
+}
+
+.payment-form {
+    height: 42rem;
+}
+
+.payment-screen {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .25);
+    padding: 1rem 2.5rem 2rem;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.payment-methods-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.payment-methods-item {
+    margin: 2rem 3rem;
+}
+
+.payment-methods-item {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 1rem 1px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.payment-methods-item:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+
+.payment-methods-item img{
+    height: 100%;
+    object-fit: cover;
+}
+/* end payment step */
+
+/* booking mail step */
+.mail-booking {
+    padding: 5rem 0 15rem;
+}
+
+.bg-mail {
+    background-image: url(../image/figmamail.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.send-mail-box {
+    text-align: center;
+    padding: 10rem 0;
+}
+
+.thanks {
+    font-family: OswaldLight;
+    font-size: 6rem;
+    letter-spacing: 1.5rem;
+    text-indent: 1.5rem;
+}
+
+.thanks-des {
+    font-family: OswaldLight;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-indent: 2px;
+    margin-bottom: 20rem;
+}
+
+.thanks-des span {
+    font-family: OswaldRegular;
+}
+
+.thanks-des span:first-child {
+    color: var(--main-color);
+}
+
+.thanks-mini-des {
+    font-family: OswaldLight;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    text-indent: 2px;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.thanks-mini-des span {
+    font-family: OswaldRegular;
+    color: var(--main-color);
+}
+
+.thanks-btn {
+    padding: 1rem 5rem;
+    font-family: OswaldRegular;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-indent: 5px;
+    background-color: var(--main-color);
+    color: var(--txt-white);
+    border-radius: 1rem;
+    transition: .3s;
+}
+
+.thanks-btn:hover {
+    background-color: var(--txt-color);
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+/* end booking mail step */
+
+
+/* responsive */
+@media only screen and (max-width: 1280px) {
+    .booking {
+        padding-top: var(--sm-md-header-height--);
+    }
+
+    .booking-box {
+        height: auto;
+        padding: .5rem 2.5rem;
+    }
+
+    .wrapper-booking {
+        position: unset;
+        transform: translateY(0);
+    }
+
+    .seat-grid {
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .control-seat-screen {
+        position: relative;
+    }
+
+    .main-check-again {
+        gap: 3rem;
+    }
+
+    .payment-form {
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+    .checkagain-clear-btn {
+        width: 12rem;
+        height: 4rem;
+        font-size: 1.4rem;
+    }
+
+    .seat-des {
+        width: 90%;
+    }
+
+    .booking-seat-screen {
+        padding: 2rem 3rem;
+    }
+
+    .seat-pick {
+        width: 4.2rem;
+        height: 4.2rem;
+        line-height: 4.2rem;
+        font-size: 1.4rem;
+    }
+
+    .confirm-step-btn {
+        width: 14rem;
+        height: 4rem;
+        font-size: 1.4rem;
+    }
+
+    .payment-methods-list {
+        justify-content: center;
+    }
+
+    .payment-methods-item {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .thanks-mini-des {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .step-clear-btn{
+        width: 10rem;
+        height: 4rem;
+        font-size: 1.4rem;
+    }
+
+    .booking-seat-screen {
+        height: auto;
+    }
+
+    .booking-seat-slider {
+        padding: 1rem 1.5rem 2rem;
+    }
+
+    .slide-item-upfloor {
+        padding: 0;
+    }
+    
+    .slide-item-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .seat-pick {
+        height: 3rem;
+        width: 3rem;
+        line-height: 3rem;
+        margin: .5rem;
+        border-radius: .5rem;
+        font-size: 1rem;
+    }
+
+    .seat-des {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .seat-des-item p {
+        font-size: 1.2rem;
+    }
+
+    .seat-des-item span {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-right: .5rem;
+    }
+
+    .seat-des-selected {
+        font-size: 1.2rem;
+    }
+
+    .booking-seat-slider .fa-arrow-left,
+    .booking-seat-slider .fa-arrow-right {
+        width: 2.8rem;
+        height: 2.8rem;
+        line-height: 2.8rem;
+        font-size: 1.4rem;
+    }
+
+    .checkagain-clear-btn {
+        width: 10rem;
+        height: 4rem;
+        font-size: 1.4rem;
+    }
+
+    .confirm-step-btn {
+        width: 10rem;
+        height: 4rem;
+        font-size: 1.4rem;
+    }
+
+    .payment-methods-item {
+        width: 6rem;
+        height: 6rem;
+        margin: 1rem 2rem;
+    }
+    
+    .thanks {
+        font-size: 4.5rem;
+    }
+
+    .thanks-des {
+        font-size: 1.6rem;
+    }
+
+    .thanks-mini-des {
+        font-size: 1.4rem;
+    }
+
+    .thanks-btn {
+        padding: 1rem 3rem;
+        font-size: 1.4rem;
+    }
+}

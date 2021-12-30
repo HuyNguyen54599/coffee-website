@@ -1,0 +1,494 @@
+/* setup all */
+@font-face {
+    font-family: OswaldExtraLight;
+    src: url(../font/Oswald-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: OswaldLight;
+    src: url(../font/Oswald-Light.ttf);
+}
+
+@font-face {
+    font-family: OswaldRegular;
+    src: url(../font/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: OswaldMedium;
+    src: url(../font/Oswald-Medium.ttf);
+}
+
+@font-face {
+    font-family: OswaldSemiBold;
+    src: url(../font/Oswald-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: OswaldBold;
+    src: url(../font/Oswald-Bold.ttf);
+}
+
+@font-face {
+    font-family: PacificoRegular;
+    src: url(../font/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: TheBraggest;
+    src: url(../font/The\ Braggest_Demo.ttf);
+}
+
+:root {
+    --main-color: #FFC139;
+    --secondary-color: #FFEFDE;
+    --txt-color: #000000;
+    --txt-white: #ffffff;
+
+    --header-height: 145px;
+    --header-padding: 20px 80px;
+    --sm-md-header-logo-- : 5rem;
+    --sm-md-header-height--: 60px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--txt-color);
+    font-family: OswaldLight;
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* container component */
+.container {
+    max-width: 1366px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+
+/* register */
+body {
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../image/lofi-coffee-shop-night-thumb.jpg );
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back-to-home {
+    color: white;
+    font-family: OswaldRegular;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 2rem;
+    top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10;
+    transition: .3s;
+}
+
+.back-to-home i {
+    font-size: 1.6rem;
+}
+
+.back-to-home:hover {
+    color: var(--main-color);
+}
+
+.form-container {
+    width: 1000px;
+    height: 550px;
+    position: relative;
+    display: flex;
+}
+
+.form-header {
+    position: absolute;
+    font-family: OswaldRegular;
+    font-size: 2.5rem;
+    letter-spacing: 20px;
+    text-indent: 15px;
+    text-transform: uppercase;
+    color: var(--txt-color);
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.form-header span {
+    font-family: OswaldRegular;
+    color: var(--txt-white);
+}
+
+.form-img {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.form-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 7rem 4rem 1rem;
+    position: relative;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1.8rem;
+}
+
+.form-group .form-label {
+    font-family: OswaldRegular;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    color: var(--main-color);
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #A0A0A0;
+    font-size: 1.6rem;
+    left: 1.5rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    background-color: #222222;
+}
+
+.form-group input {
+    width: 100%;
+    color: #A0A0A0;
+    background-color: transparent;
+    border: none;
+    padding: 1rem 1rem 1rem 4rem;
+    border-bottom: 2.5px solid var(--main-color);
+    font-family: OswaldRegular;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-indent: 1px;
+}
+
+.form-group .form-message {
+    font-family: OswaldLight;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    display: none;
+}
+
+.form-group.success .form-message {
+    display: block;
+    color: #55ffb0;
+   
+}
+
+.form-group.error .form-message {
+    display: block;
+    color: #FF5555;
+}
+
+.form-group-accept {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: .2rem 0 2rem;
+}
+
+.link-text-form {
+    text-decoration: underline;
+}
+
+.link-text-form:hover {
+    text-decoration: none;
+}
+
+.form-group-accept label {
+    font-family: OswaldLight;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--txt-white);
+    cursor: pointer;
+}
+
+.form-group-accept #accept-check {
+    appearance: none;
+    display: inline-block;
+    height: 1.6rem;
+    width: 1.6rem;
+    cursor: pointer;
+    border-radius: .2rem;
+    background-color: var(--txt-white);
+    position: relative;
+}
+
+.form-group-accept #accept-check::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.2rem;
+    content: "\f00c";
+    color: var(--txt-white);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: .2rem;
+    background-color: var(--main-color);
+    display: grid;
+    place-items: center;
+    display: none;
+}
+
+.form-group-accept #accept-check:checked:after {
+    display: grid;
+}
+
+.form-submit-signin {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: .6rem 0;
+    border-radius: 3.5rem;
+    background-color: var(--main-color);
+    color: var(--txt-color);
+    font-family: OswaldRegular;
+    font-size: 1.6rem;
+    letter-spacing: 7px;
+    text-indent: 7px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.form-submit-signin:focus {
+    outline: none;
+}
+
+.form-submit-signin:hover {
+    background-color: #ffd342;
+    color: var(--txt-white);
+}
+
+.sign-use {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 3.5rem;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.use-item {
+    display: grid;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    color: var(--txt-white);
+    font-size: 1.8rem;
+    box-shadow:  0 0 20rem 5px var(--txt-white);
+    transition: .3s;
+}
+
+.use-item:hover {
+    box-shadow:  0 0 .5rem 1px var(--txt-white);
+    transform: scale(1.2);
+}
+
+.use-item i {
+    transition: .5s;
+}
+
+.use-item:hover i {
+    transform: rotate(360deg);
+}
+
+.use-item:first-child {
+    background-color: #3479EA;
+}
+
+.use-item:last-child {
+    background-color: #FF3366;
+}
+
+.use-item:nth-child(2) {
+    background-image: linear-gradient(to right, #515BD4, #8134AF, #DD2A7B, #F9A94A, #FEDA77);
+}
+
+.form-login {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: OswaldBold;
+    font-size: 1.3rem;
+    color: var(--txt-color);
+    letter-spacing: 2px;
+    text-align: center;
+    text-indent: 2px;
+    margin-top: 3rem;
+    width: 100%;
+    text-shadow: 1px 1px .5rem  var(--txt-white);
+}
+
+.form-login-deep {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: OswaldLight;
+    font-size: 1.3rem;
+    color: var(--txt-white);
+    letter-spacing: 2px;
+    text-align: center;
+    text-indent: 2px;
+    margin-top: 3rem;
+    width: 100%;
+    display: none;
+}
+/* end register */
+
+
+/* responsive */
+@media only screen and (max-width: 1280px) {
+    .form-container {
+        width: 500px;
+        height: 600px;
+    }
+
+    .form-header {
+        z-index: 2;
+        text-indent: 20px;
+    }
+
+    .form-img {
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .form {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+    }
+
+    .form-login {
+        display: none;
+    }
+
+    .form-login-deep {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+    .form-container {
+        width: 500px;
+    }
+
+    .form-submit-signin {
+        width: 70%;
+    }
+
+    .back-to-home {
+        font-size: 1.2rem;
+        left: .5rem;
+        top: .2rem;
+
+    }
+    
+    .back-to-home i {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .form {
+        padding-top: 6rem;
+    }
+
+    .form-container {
+        width: 320px;
+        height: 100vh;
+    }
+
+    .form-header {
+        font-size: 2rem;
+        letter-spacing: 10px;
+        text-indent: 10px;
+    }
+
+    .use-item:hover {
+        transform: scale(1.2) translateX(50%);
+    }
+
+    .form-group-accept {
+        margin: 0rem 0 1.5rem;
+    }
+
+
+    .form-login-deep {
+        bottom: 1rem;
+    }
+}
+/* end responsive */

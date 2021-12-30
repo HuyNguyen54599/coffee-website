@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes Coffee</title>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="css/newaccount.css">
+    <!-- Grid css -->
+    <link rel="stylesheet" href="css/grid.css">
+    <!-- Scroll animation -->
+    <link rel="stylesheet" href="css/scrollAnimation.css">
+</head>
+
+<body>
+    <a href="index.html" class="back-to-home bottom-to show-el-effect"><i class="fas fa-arrow-left"></i> HOME</a>
+    <section>
+        <div class="form-container">
+            <h2 class="form-header">userRE<span>GISTER</span></h2>
+            <div class="form-img top-to show-el-effect">
+                <img src="image/ceb2da9e5d053cfabbd211d2557bec15.jpg" alt="">
+                <div class="form-login">
+                    Have an account yet?
+                    <i class="fas fa-arrow-right"></i>
+                    <a href="login.html" class="link-text-form">Login</a>
+                    now
+                </div>
+            </div>
+            <div class="form bottom-to show-el-effect" id="signin-form">
+                <div class="form-group form-group-name">
+                    <label for="user-name" class="form-label">Username</label>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="user-name" name="user-name" placeholder="Type your username">
+                    </div>
+                    <span class="form-message" data-err-for="user-name">* Error message</span>
+                </div>
+                <div class="form-group form-group-pass">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="text" id="password" name="password" placeholder="Type your password">
+                    </div>
+                    <span class="form-message" data-err-for="password">* Error message</span>
+                </div>
+                <div class="form-group form-group-passconfirm">
+                    <label for="pass-confirm" class="form-label">Confirm Password</label>
+                    <div class="input-field">
+                        <i class="fas fa-unlock"></i>
+                        <input type="text" id="pass-confirm" name="pass-confirm" placeholder="Confirm your password">
+                    </div>
+                    <span class="form-message" data-err-for="pass-confirm">* Error message</span>
+                </div>
+                <div class="form-group form-group-email">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="input-field">
+                        <i class="fas fa-mail-bulk"></i>
+                        <input type="text" id="email" name="email" placeholder="Type your email">
+                    </div>
+                    <span class="form-message" data-err-for="email">* Error message</span>
+                </div>
+                <div class="form-group-accept">
+                    <input type="checkbox" id="accept-check">
+                    <label for="accept-check">
+                        I have read and accept the
+                        <a href="#" class="link-text-form">Terms of Use</a>
+                        and
+                        <a href="#" class="link-text-form">Privacy Policy</a>
+                    </label>
+                </div>
+                <button class="form-submit-signin">log in</button>
+                <ul class="sign-use">
+                    <a href="#" class="use-item">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="use-item">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="use-item">
+                        <i class="fab fa-invision"></i>
+                    </a>
+                </ul>
+                <div class="form-login-deep">
+                    Have an account yet?
+                    <i class="fas fa-arrow-right"></i>
+                    <a href="login.html" class="link-text-form">Login</a>
+                    now
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+
+    <!-- Create account JS -->
+    <script src="js/signin.js"></script>
+    <script src="js/scrollAnimation.js"></script>
+</body>
+
+</html>

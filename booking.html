@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes Coffee</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="image/yeslogo.png" type="image/x-icon">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Header footer css -->
+    <link rel="stylesheet" href="css/header-footer.css">
+    <!-- Main Header css -->
+    <link rel="stylesheet" href="css/main-header.css">
+    <!-- Style css -->
+    <link rel="stylesheet" href="css/booking.css">
+    <!-- Grid css -->
+    <link rel="stylesheet" href="css/grid.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <div class="container">
+            <!-- mobile menu -->
+            <div class="mobile-menu">
+                <a href="#" class="mb-logo">
+                    <img src="image/yeslogo.png" alt="img" class="mb-logo-img">
+                    <p class="mb-logo-detail">yes coffee</p>
+                </a>
+                <span class="mb-menu-toggle menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </div>
+            <!-- end mobile menu -->
+            <div class="header-wrapper">
+                <div class="header-wrapper-top">
+                    <span class="mb-menu-close menu-toggle">
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <a href="#" class="header-link phone-link">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+84 968963859</span>
+                    </a>
+                    <a href="#" class="logo">
+                        <img src="image/yeslogo.png" alt="img" class="logo-img">
+                        <p class="logo-detail">yes coffee</p>
+                    </a>
+                    <a href="#" class="header-link map-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span> Kí Túc Xá Khu A ĐHQG</span>
+                    </a>
+                </div>
+                <div class="header-wrapper-bottom">
+                    <ul class="menu">
+                        <li class="menu-item dropdown-menu-item">
+                            <a href="index.html" class="menu-item-link dropdown">
+                                Home
+                                <i class="fas fa-sort-down"></i>
+                                <i class="fas fa-sort-up"></i>
+                            </a>
+                            <ul class="dropdown-content">
+                                <li> <a href="#">More</a> </li>
+                                <li><a href="#">picture</a></li>
+                                <li><a href="#">add</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="about.html" class="menu-item-link">
+                                about
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="booking.html" class="menu-item-link">
+                                booking
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="contact.html" class="menu-item-link">
+                                contact
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="login.html" class="menu-item-link">
+                                login
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="social-extend">
+                        <ul class="social">
+                            <li class="social-item">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#"><i class="fab fa-invision"></i></a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                        <ul class="extend">
+                            <li class="extend-item">
+                                <a href="#"><i class="fas fa-search"></i></a>
+                                <input type="text" placeholder="Blur to close">
+                            </li>
+                            <li class="extend-item">
+                                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                                <div class="count-shopping-cart">0</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+
+    <!-- booking info -->
+    <section class="booking">
+        <div class="container">
+            <div class="main-header">
+                <h3 class="main-header-title">our drinks</h3>
+                <p class="main-header-des">The coffee shop can tell you everything you need to know about how many
+                    variants of coffee there are – you couldn't count them all even if you tried.</p>
+            </div>
+            <div class="booking-info row" id="basic-form-info">
+                <div class="form-select-info form-select form-group col-12">
+                    <label for="customer-infomation">* Infomation</label>
+                    <div class="wrraper-select">
+                        <select name="use-infomation" id="customer-infomation">
+                            <option value="" selected>-- Use your personal information / another information --</option>
+                            <option value="Use your personal information">Use your personal information</option>
+                            <option value="another information">another information</option>
+                        </select>
+                    </div>
+                    <span class="error-message" err-data-for="customer-infomation">*error message</span>
+                </div>
+                <div class="form-group form-group-name col-6 col-sm-12">
+                    <label for="customer-name">* Name</label>
+                    <input type="text" name="name" class="form-input" id="customer-name" placeholder="Typing your name">
+                    <span class="error-message" err-data-for="customer-name">*error message</span>
+                </div>
+                <div class="form-group form-group-email col-6 col-sm-12">
+                    <label for="customer-email">* Email adress</label>
+                    <input type="text" name="email" class="form-input" id="customer-email"
+                        placeholder="Typing email address">
+                    <span class="error-message" err-data-for="customer-email">*error message</span>
+                </div>
+                <div class="form-group form-group-phone col-6 col-sm-12">
+                    <label for="customer-phone">* Phone number</label>
+                    <input type="text" name="phone" class="form-input" id="customer-phone"
+                        placeholder="Typing your phone number">
+                    <span class="error-message" err-data-for="customer-phone">*error message</span>
+                </div>
+                <div class="form-group form-group-dob col-6 col-sm-12">
+                    <label for="customer-dob">* Date of birth</label>
+                    <input type="date" name="date" class="form-input" id="customer-dob" placeholder="Typing your date">
+                    <span class="error-message" err-data-for="customer-dob">*error message</span>
+                </div>
+                <div class="col-6 col-md-12">
+                    <div class="row">
+                        <div class="form-group form-select form-select-district col-6 col-md-12">
+                            <label for="customer-email">* District</label>
+                            <div class="wrraper-select">
+                                <select name="district" id="customer-district">
+                                    <option value="">-- Choose your District --</option>
+                                    <option value="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</option>
+                                    <option value="Lorem ipsum sit dolor">Lorem ipsum sit dolor</option>
+                                </select>
+                            </div>
+                            <span class="error-message" err-data-for="customer-district">*error message</span>
+                        </div>
+                        <div class="form-group form-select form-select-city col-6 col-md-12">
+                            <label for="customer-email">* Province / City</label>
+                            <div class="wrraper-select">
+                                <select name="city" id="customer-city">
+                                    <option value="">-- Choose your Province --</option>
+                                    <option value="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</option>
+                                    <option value="Lorem ipsum sit dolor">Lorem ipsum sit dolor</option>
+                                </select>
+                            </div>
+                            <span class="error-message" err-data-for="customer-city">*error message</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group form-group-detail-address col-6 col-md-12">
+                    <label for="customer-dob">* Detailed address</label>
+                    <input type="text" class="form-input" name="detail-address" id="customer-detail-address"
+                        placeholder="Typing your detail address">
+                    <span class="error-message" err-data-for="customer-detail-address">*error message</span>
+                </div>
+            </div>
+            <div class="step-clear">
+                <div class="step-clear-btn step-btn">go step</div>
+                <div class="step-clear-btn clear-btn">clear</div>
+            </div>
+        </div>
+    </section>
+    <!-- end booking info -->
+
+
+    <!-- line booking step -->
+    <section class="booking-step">
+        <div class="container">
+            <div class="step-line">
+                <div class="step-process-line">
+                    <div class="line-bg-process line-fist"></div>
+                    <div class="line-bg-process line-second"></div>
+                    <div class="line-bg-process line-last"></div>
+                </div>
+                <div class="step-process-number">
+                    <div class="number-bg-process number-fist waiting">1</div>
+                    <div class="number-bg-process number-second">2</div>
+                    <div class="number-bg-process number-third">3</div>
+                    <div class="number-bg-process number-last">4</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end line booking step -->
+
+    <!-- booking seat step -->
+    <section class="booking-seat main-step" id="box-booking-seat">
+        <div class="container">
+            <div class="booking-box">
+                <div class="wrapper-booking">
+                    <div class="seat-grid row">
+                        <div class="control-seat-screen col-7 col-md-12">
+                            <div class="booking-seat-screen">
+                                <h3 class="booking-header-text">booking seat</h3>
+                                <div class="booking-seat-slider">
+                                    <div class="slide-container">
+                                        <ul class="slide-list">
+                                            <li class="slide-item">
+                                                <div class="floor-text">Floor 1</div>
+                                                <div class="slide-item-row">
+                                                    <div class="seat-pick empty-seat down-floor">1</div>
+                                                    <div class="seat-pick empty-seat down-floor">2</div>
+                                                    <div class="seat-pick empty-seat down-floor">3</div>
+                                                    <div class="seat-pick down-floor reserved-seat">4</div>
+                                                    <div class="seat-pick empty-seat down-floor">5</div>
+                                                    <div class="seat-pick empty-seat down-floor">6</div>
+                                                </div>
+                                                <div class="slide-item-row">
+                                                    <div class="seat-pick empty-seat down-floor">7</div>
+                                                    <div class="seat-pick down-floor reserved-seat">8</div>
+                                                    <div class="seat-pick empty-seat down-floor">9</div>
+                                                    <div class="seat-pick empty-seat down-floor">10</div>
+                                                    <div class="seat-pick empty-seat down-floor">11</div>
+                                                    <div class="seat-pick empty-seat down-floor">12</div>
+                                                </div>
+                                                <div class="slide-item-row">
+                                                    <div class="seat-pick empty-seat down-floor">13</div>
+                                                    <div class="seat-pick down-floor reserved-seat">14</div>
+                                                    <div class="seat-pick empty-seat down-floor">15</div>
+                                                    <div class="seat-pick empty-seat down-floor">16</div>
+                                                    <div class="seat-pick empty-seat down-floor">17</div>
+                                                    <div class="seat-pick empty-seat down-floor">18</div>
+                                                </div>
+                                                <div class="slide-item-row">
+                                                    <div class="seat-pick empty-seat down-floor">19</div>
+                                                    <div class="seat-pick empty-seat down-floor">20</div>
+                                                    <div class="seat-pick empty-seat down-floor">21</div>
+                                                    <div class="seat-pick down-floor reserved-seat">22</div>
+                                                    <div class="seat-pick empty-seat down-floor">23</div>
+                                                    <div class="seat-pick empty-seat down-floor">24</div>
+                                                </div>
+                                                <div class="slide-item-row">
+                                                    <div class="seat-pick empty-seat down-floor">25</div>
+                                                    <div class="seat-pick down-floor reserved-seat">26</div>
+                                                    <div class="seat-pick empty-seat down-floor">27</div>
+                                                    <div class="seat-pick empty-seat down-floor">28</div>
+                                                    <div class="seat-pick empty-seat down-floor">29</div>
+                                                    <div class="seat-pick empty-seat down-floor">30</div>
+                                                </div>
+                                            </li>
+                                            <li class="slide-item slide-item-upfloor">
+                                                <p class="floor-text">Floor 2</p>
+                                                <div class="slide-item-row">
+                                                    <div class="seat-pick empty-seat down-floor">31</div>
+                                                    <div class="seat-pick empty-seat down-floor">32</div>
+                                                    <div class="seat-pick empty-seat down-floor">33</div>
+                                                    <div class="seat-pick empty-seat down-floor">34</div>
+                                                </div>
+                                                <div class="slide-item-row">
+                                                    <div class="seat-pick empty-seat down-floor">35</div>
+                                                    <div class="seat-pick down-floor reserved-seat">36</div>
+                                                    <div class="seat-pick empty-seat down-floor">37</div>
+                                                    <div class="seat-pick empty-seat down-floor">38</div>
+
+                                                </div>
+                                                <div class="slide-item-row">
+                                                    <div class="seat-pick empty-seat down-floor">39</div>
+                                                    <div class="seat-pick empty-seat down-floor">40</div>
+                                                    <div class="seat-pick empty-seat down-floor">41</div>
+                                                    <div class="seat-pick empty-seat down-floor">42</div>
+
+                                                </div>
+                                                <div class="slide-item-row">
+                                                    <div class="seat-pick empty-seat down-floor">43</div>
+                                                    <div class="seat-pick empty-seat down-floor">44</div>
+                                                    <div class="seat-pick empty-seat down-floor">45</div>
+                                                    <div class="seat-pick empty-seat down-floor">46</div>
+                                                </div>
+                                                <div class="slide-item-row">
+                                                    <div class="seat-pick empty-seat down-floor">47</div>
+                                                    <div class="seat-pick empty-seat down-floor">48</div>
+                                                    <div class="seat-pick down-floor reserved-seat">49</div>
+                                                    <div class="seat-pick empty-seat down-floor">50</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <i class="fas fa-arrow-left"></i>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                                <ul class="seat-des">
+                                    <li class="seat-des-item">
+                                        <p class="seat-des-empty">
+                                            <span></span>
+                                            Still empty
+                                        </p>
+                                    </li>
+                                    <li class="seat-des-item">
+                                        <p class="seat-des-reserved">
+                                            <span></span>
+                                            Reserved
+                                        </p>
+                                    </li>
+                                    <li class="seat-des-item">
+                                        <p class="seat-des-selected">
+                                            <span></span>
+                                            Selected
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="control-seat-form col-5 col-md-12">
+                            <div class="booking-seat-form ">
+                                <h3 class="booking-header-text">booking form</h3>
+                                <div class="seat-form-component main-form-step row">
+                                    <div class="form-group form-select-seat-time col-12">
+                                        <label for="seat-time">Timing</label>
+                                        <div class="wrraper-select">
+                                            <select name="seat-time" id="seat-time">
+                                                <option value="">-- Choose your time stay --</option>
+                                                <option value="Over 5 hours">-- Over 5 hours --</option>
+                                                <option value="Less than 5 hours">-- Less than 5 hours --</option>
+                                            </select>
+                                        </div>
+                                        <span class="error-message" err-data-for="seat-time">*error message</span>
+                                    </div>
+                                    <div class="form-group form-input-seat-date col-6 col-md-12">
+                                        <label for="seat-date">Date</label>
+                                        <input type="date" name="seat-date" id="seat-date">
+                                        <span class="error-message" err-data-for="seat-date">*error message</span>
+                                    </div>
+                                    <div class="form-group form-select-seat-overnight col-6 col-md-12">
+                                        <label for="seat-overnight">Overnight</label>
+                                        <div class="wrraper-select">
+                                            <select name="seat-overnight" id="seat-overnight">
+                                                <option value="">-- Choose your type --</option>
+                                                <option value="Over 5 hours">-- Overnight --</option>
+                                                <option value="Less than 5 hours">-- Not overnight --</option>
+                                            </select>
+                                        </div>
+                                        <span class="error-message" err-data-for="seat-overnight">*error message</span>
+                                    </div>
+                                    <div class="form-group form-input-seat-adults col-6 col-md-12">
+                                        <label for="seat-adults">Adults</label>
+                                        <input type="number" min="1" value="1" name="seat-adults" id="seat-adults">
+                                        <span class="error-message" err-data-for="seat-adults">*error message</span>
+                                    </div>
+                                    <div class="form-group form-input-seat-children col-6 col-md-12">
+                                        <label for="seat-children">Children</label>
+                                        <input type="number" min="0" value="0" name="seat-children" id="seat-children">
+                                        <span class="error-message" err-data-for="seat-children">*error message</span>
+                                    </div>
+                                </div>
+                                <div class="confirm-step-btn confirm-step-next">next</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- end booking seat step -->
+
+
+    <!-- check again -->
+    <section class="check-again main-step" id="box-check-again">
+        <div class="container">
+            <div class="check-again-header">check info again</div>
+            <div class="check-again-wrapper">
+                <div class="main-check-again row row-reverse">
+                    <div class="check-again-form col-6 col-md-12">
+                        <div class="check-form-component main-form-step row">
+                            <div class="form-group form-select-checkagain-time col-6 col-md-12">
+                                <label for="checkagain-time">Timing</label>
+                                <div class="wrraper-select">
+                                    <select name="checkagain-time" id="checkagain-time">
+                                        <option value="Over 5 hours">-- Over 5 hours --</option>
+                                        <option value="Less than 5 hours">-- Less than 5 hours --</option>
+                                    </select>
+                                </div>
+                                <span class="error-message" err-data-for="checkagain-time">*error message</span>
+                            </div>
+                            <div class="form-group form-input-checkagain-seat col-6 col-md-12">
+                                <label for="checkagain-seat">Seat</label>
+                                <input type="text" readonly name="checkagain-seat" id="checkagain-seat">
+                                <span class="error-message" err-data-for="checkagain-seat">*error message</span>
+                            </div>
+                            <div class="form-group form-input-checkagain-date col-6 col-md-12">
+                                <label for="checkagain-date">Date</label>
+                                <input type="date" name="checkagain-date" id="checkagain-date">
+                                <span class="error-message" err-data-for="checkagain-date">*error message</span>
+                            </div>
+                            <div class="form-group form-select-checkagain-overnight col-6 col-md-12">
+                                <label for="checkagain-overnight">Overnight</label>
+                                <div class="wrraper-select">
+                                    <select name="checkagain-overnight" id="checkagain-overnight">
+                                        <option value="">-- Choose your type --</option>
+                                        <option value="Over 5 hours">-- Overnight --</option>
+                                        <option value="Less than 5 hours">-- Not overnight --</option>
+                                    </select>
+                                </div>
+                                <span class="error-message" err-data-for="checkagain-overnight">*error message</span>
+                            </div>
+                            <div class="form-group form-input-checkagain-adults col-6 col-md-12">
+                                <label for="checkagain-adults">Adults</label>
+                                <input type="number" min="1" value="1" name="checkagain-adults" id="checkagain-adults">
+                                <span class="error-message" err-data-for="checkagain-adults">*error message</span>
+                            </div>
+                            <div class="form-group form-input-checkagain-children col-6 col-md-12">
+                                <label for="checkagain-children">Children</label>
+                                <input type="number" min="0" value="0" name="checkagain-children"
+                                    id="checkagain-children">
+                                <span class="error-message" err-data-for="checkagain-children">*error message</span>
+                            </div>
+                        </div>
+                        <div class="checkagain-clear-btn">clear</div>
+                    </div>
+                    <div class="check-screen-seat col-6 col-md-12">
+                        <div class="check-view-screen">
+                            <img src="image/69245214_2188434301266166_4250637744537075712_n.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="step-btn-box">
+                <div class="confirm-step-btn confirm-step-prev">prev</div>
+                <div class="confirm-step-btn confirm-step-next">next</div>
+            </div>
+        </div>
+    </section>
+    <!-- end check again -->
+
+
+    <!-- payment step -->
+    <section class="payment main-step" id="box-payment">
+        <div class="container">
+            <div class="booking-box">
+                <div class="wrapper-booking">
+                    <div class="seat-grid row">
+                        <div class="control-seat-screen col-7 col-md-12">
+                            <div class="booking-seat-screen">
+                                <h3 class="booking-header-text">payment methods</h3>
+                                <div class="payment-screen">
+                                    <ul class="payment-methods-list">
+                                        <li class="payment-methods-item">
+                                            <img src="image/246x0w_636892088212276736.jpg" alt="">
+                                        </li>
+                                        <li class="payment-methods-item">
+                                            <img src="image/vinid.jpg" alt="">
+                                        </li>
+                                        <li class="payment-methods-item">
+                                            <img src="image/momo.png" alt="">
+                                        </li>
+                                        <li class="payment-methods-item">
+                                            <img src="image/vietel.png" alt="">
+                                        </li>
+                                        <li class="payment-methods-item">
+                                            <img src="image/zalo.png" alt="">
+                                        </li>
+                                        <li class="payment-methods-item">
+                                            <img src="image/visa.png" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="confirm-step-btn confirm-step-prev">prev</div>
+                            </div>
+                        </div>
+                        <div class="control-seat-form col-5 col-md-12">
+                            <div class="payment-form">
+                                <h3 class="booking-header-text">payment</h3>
+                                <div class="payment-form-component main-form-step row">
+                                    <div class="form-group form-select-payment-time col-12">
+                                        <label for="payment-field">Methods</label>
+                                        <div class="wrraper-select">
+                                            <select name="payment-field" id="payment-field">
+                                                <option value="">-- Choose your method --</option>
+                                                <option value="Vietinbank">-- Vietinbank --</option>
+                                                <option value="Vin ID">-- Vin ID --</option>
+                                                <option value="Momo">-- Momo --</option>
+                                                <option value="Viettel Pay">-- Viettel Pay --</option>
+                                                <option value="Zalo Pay">-- Zalo Pay --</option>
+                                                <option value="Visa">-- Visa --</option>
+                                            </select>
+                                        </div>
+                                        <span class="error-message" err-data-for="payment-field">*error message</span>
+                                    </div>
+                                    <div class="confirm-step-btn confirm-step-next">next</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- end payment step -->
+
+
+    <!-- booking mail step -->
+    <section class="mail-booking main-step">
+        <div class="container bg-mail">
+            <div class="send-mail-box">
+                <div class="thanks">Thank You!</div>
+                <p class="thanks-des">For choosing <span>Yes</span> <span>Coffee</span></p>
+                <p class="thanks-mini-des">
+                    We have just sent to your <span>E-mail</span> a letter with complete infomation about your booking
+                </p>
+                <a href="index.html" class="thanks-btn">home</a>
+            </div>
+        </div>
+    </section>
+    <!-- booking mail step -->
+
+
+    <!-- end footer -->
+    <footer>
+        <div class="footer-wrapper container">
+            <div class="footer-content row">
+                <div class="footer-begin-content col-8 col-md-9 col-sm-12 row">
+                    <div class="footer-ref col-4">
+                        <h4 class="footer-docs-head">Docs Reference</h4>
+                        <ul class="ref-list">
+                            <li class="ref-item">ThemeFree</li>
+                            <li class="ref-item">Ospasanoic Custome</li>
+                            <li class="ref-item">Youtube</li>
+                            <li class="ref-item">Free Design Web</li>
+                            <li class="ref-item">Google</li>
+                            <li class="ref-item">Map Design</li>
+                        </ul>
+                    </div>
+                    <div class="footer-ser col-4">
+                        <h4 class="footer-docs-head">Our Service</h4>
+                        <ul class="ref-list">
+                            <li class="ref-item">UX/UI Design</li>
+                            <li class="ref-item">Dev</li>
+                            <li class="ref-item">Team</li>
+                            <li class="ref-item">Zalo Group</li>
+                        </ul>
+                    </div>
+                    <div class="footer-ref-second col-4">
+                        <h4 class="footer-docs-head">Docs Reference</h4>
+                        <ul class="ref-list">
+                            <li class="ref-item">ThemeFree</li>
+                            <li class="ref-item">Ospasanoic Custome</li>
+                            <li class="ref-item">Youtube</li>
+                            <li class="ref-item">Free Design Web</li>
+                            <li class="ref-item">Google</li>
+                            <li class="ref-item">Map Design</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-end-content col-4 col-md-3 col-sm-12">
+                    <h4 class="footer-docs-head">Contact Us</h4>
+                    <p class="footer-instagram"><i class="fab fa-instagram-square"></i> Mochi Sin</p>
+                    <p class="footer-phone"><i class="fas fa-phone-square-alt"></i> +84 968963859</p>
+                    <form action="">
+                        <input type="text" placeholder="Email here">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <ul class="footer-social">
+                        <li class="footer-social-item">
+                            <a href="" class="footer-social-link">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li class="footer-social-item">
+                            <a href="" class="footer-social-link">
+                                <i class="fab fa-twitter-square"></i>
+                            </a>
+                        </li>
+                        <li class="footer-social-item">
+                            <a href="" class="footer-social-link">
+                                <i class="fab fa-invision"></i>
+                            </a>
+                        </li>
+                        <li class="footer-social-item">
+                            <a href="" class="footer-social-link">
+                                <i class="fab fa-instagram-square"></i>
+                            </a>
+                        </li>
+                        <li class="footer-social-item">
+                            <a href="" class="footer-social-link">
+                                <i class="fas fa-phone-square-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+
+    <!-- App js -->
+    <script src="js/header.js"></script>
+    <script src="js/clickSelectField.js"></script>
+    <script src="js/infoValidation.js"></script>
+    <script src="js/seatpick.js"></script>
+    <script src="js/formbooking.js"></script>
+    <script src="js/booking.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+.main-header {
+    width: 50%;
+    margin: auto;
+    padding: 4.5rem 0 5.5rem;
+}
+
+.main-header-title {
+    font-family: OswaldLight;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 1rem;
+    text-indent: 1rem;
+    text-align: center;
+    width: 65%;
+    margin: auto;
+    position: relative;
+}
+
+.main-header-title::before,
+.main-header-title::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 5rem;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-header-title::before {
+    left: 0;
+}
+
+.main-header-title::after {
+    right: 0;
+}
+
+.main-header-des {
+    font-family: OswaldLight;
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    text-indent: .2rem;
+    text-align: center;
+    margin: 1.5rem auto 0;
+}
+
+
+
+/* responsive */
+@media only screen and (max-width: 1280px) {
+
+    .main-header {
+        width: 60%;
+    }
+
+    .main-header-title {
+        font-size: 3rem;
+        letter-spacing: .8rem;
+    }
+
+    .main-header-des {
+        font-size: 1.4rem;
+        letter-spacing: .1rem;
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+
+    .main-header {
+        width: 100%;
+    }
+
+    .main-header-title {
+        font-size: 2.5rem;
+        width: 40%;
+        letter-spacing: .6rem;
+    }
+
+    .main-header-des {
+        font-size: 1.2rem;
+        letter-spacing: .1rem;
+    }
+
+    .main-header-title::before, .main-header-title::after {
+        width: 3.5rem;
+        height: 2px;
+    }
+
+}
