@@ -47,11 +47,11 @@
 
     --header-height: 145px;
     --header-padding: 20px 80px;
-    --sm-md-header-logo-- : 5rem;
+    --sm-md-header-logo--: 5rem;
     --sm-md-header-height--: 60px;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -91,10 +91,16 @@ img {
     margin: auto;
     padding: 0 20px;
     position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .section {
     padding: 60px 0;
+}
+
+.container.container-full-height {
+    height: 100vh;
 }
 
 
@@ -169,7 +175,7 @@ header {
     width: 25%;
 }
 
-.map-link{
+.map-link {
     text-align: right;
 }
 
@@ -214,7 +220,7 @@ header {
     position: relative;
     display: flex;
     justify-content: space-around;
-    padding: .5rem 0 ;
+    padding: .5rem 0;
 }
 
 .menu {
@@ -268,7 +274,7 @@ header {
     transition: .3s;
 }
 
-.dropdown-content li:hover a{
+.dropdown-content li:hover a {
     color: var(--main-color);
 }
 
@@ -315,11 +321,11 @@ header {
     padding-right: 2rem;
 }
 
-.extend-item a{
+.extend-item a {
     position: relative;
 }
 
-.extend input[type = "text"] {
+.extend input[type="text"] {
     height: 3rem;
     width: 25rem;
     margin: auto;
@@ -338,7 +344,7 @@ header {
     transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.extend.search-active input[type = "text"] {
+.extend.search-active input[type="text"] {
     transform: translate(-105%, -50%);
     opacity: 1;
     visibility: visible;
@@ -350,7 +356,7 @@ header {
     visibility: hidden;
 }
 
-.extend input[type = "text"]:focus {
+.extend input[type="text"]:focus {
     outline: none;
 }
 
@@ -417,7 +423,7 @@ header {
     position: absolute;
     top: 60%;
     left: 10%;
-    transform: translate(0,-60%);
+    transform: translate(0, -60%);
     color: var(--txt-white);
 }
 
@@ -489,7 +495,7 @@ header {
 }
 
 .poster-top {
-    top: 0; 
+    top: 0;
     left: 1.5rem;
 }
 
@@ -710,7 +716,7 @@ header {
     box-shadow: 0 0 20px 5px rgb(0 0 0 / 25%);
 }
 
-.slide-list{
+.slide-list {
     height: 100%;
     width: 500%;
     display: flex;
@@ -735,7 +741,7 @@ header {
     left: 0;
     visibility: hidden;
     opacity: 0;
-    transform: translate(0,-30%);
+    transform: translate(0, -30%);
     background-color: rgba(0, 0, 0, .3);
     color: var(--txt-white);
     border-radius: 50%;
@@ -755,7 +761,7 @@ header {
     right: 0;
     visibility: hidden;
     opacity: 0;
-    transform: translate(0,-60%);
+    transform: translate(0, -60%);
     background-color: rgba(0, 0, 0, .3);
     color: var(--txt-white);
     border-radius: 50%;
@@ -764,12 +770,12 @@ header {
     width: 4.5rem;
     height: 4.5rem;
     line-height: 4.5rem;
-    text-align: center;   
+    text-align: center;
     font-size: 2rem;
     transition: .3s;
 }
 
-.slider .fa-arrow-right:hover, 
+.slider .fa-arrow-right:hover,
 .slider .fa-arrow-left:hover {
     background-color: rgba(0, 0, 0, .65);
 }
@@ -875,7 +881,7 @@ header {
     font-family: OswaldLight;
 }
 
-.staff-social{
+.staff-social {
     width: 80%;
     margin: 0 auto 3rem;
     display: flex;
@@ -900,7 +906,7 @@ header {
 
 footer {
     height: 40rem;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.3)),  url(../image/Coffee-concept-on-wooden-background-white-coffee-cup-top-view.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../image/Coffee-concept-on-wooden-background-white-coffee-cup-top-view.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -925,7 +931,7 @@ footer {
     gap: 2rem;
 }
 
-.footer-logo img{
+.footer-logo img {
     width: 7rem;
     height: 7rem;
 }
@@ -942,26 +948,26 @@ footer h2 {
     text-shadow: 15px 15px 5px var(--txt-color);
 }
 
-.footer-des{
+.footer-des {
     font-family: OswaldRegular;
     color: var(--txt-color);
     letter-spacing: 2px;
     font-size: 1.6rem;
     width: 70%;
     text-align: center;
-    text-shadow: 0px 0px 10px var(--txt-white);   
+    text-shadow: 0px 0px 10px var(--txt-white);
 }
 
-footer form{
+footer form {
     position: relative;
     width: 60%;
 }
 
-footer input:focus{
+footer input:focus {
     outline: none;
 }
 
-footer input{
+footer input {
     width: 100%;
     padding: 1rem 1rem;
     font-family: OswaldLight;
@@ -972,11 +978,11 @@ footer input{
     border: none;
 }
 
-footer button:focus{
+footer button:focus {
     outline: none;
 }
 
-footer button{
+footer button {
     height: 100%;
     padding: 0 2rem;
     text-align: center;
@@ -991,7 +997,7 @@ footer button{
     transition: .3s;
 }
 
-footer button:hover{
+footer button:hover {
     background-color: var(--txt-color);
     color: var(--main-color);
 }
@@ -1055,7 +1061,7 @@ footer button:hover{
         cursor: pointer;
         transition: transform .3s cubic-bezier(0.86, 0, 0.07, 1);
     }
-    
+
     .menu-toggle:hover {
         transform: scale(1.2);
     }
@@ -1112,7 +1118,7 @@ footer button:hover{
         flex-direction: column;
     }
 
-    .social-extend { 
+    .social-extend {
         position: unset;
         width: 100%;
     }
@@ -1146,7 +1152,7 @@ footer button:hover{
         transform: translate(100%, -50%);
     }
 
-    .extend-item:first-child a  {
+    .extend-item:first-child a {
         display: none;
     }
 
@@ -1177,7 +1183,7 @@ footer button:hover{
     .menu-item-link:hover {
         background-color: #f0f0f0;
     }
-    
+
     .dropdown i {
         position: absolute;
         top: .9rem;
@@ -1230,7 +1236,7 @@ footer button:hover{
         font-size: 8rem;
         letter-spacing: 12px;
     }
-    
+
     .hero-detail {
         font-size: 1.6rem;
         letter-spacing: 2px;
@@ -1239,7 +1245,7 @@ footer button:hover{
     .description {
         margin-top: 3rem;
     }
-    
+
     .des-title {
         font-size: 3.5rem;
     }
@@ -1255,11 +1261,11 @@ footer button:hover{
 
     .slider {
         margin-left: auto;
-        margin-right: auto; 
+        margin-right: auto;
     }
 
     .menu-list {
-        margin-top: 2rem; 
+        margin-top: 2rem;
     }
 
     .main-header {
@@ -1354,7 +1360,7 @@ footer button:hover{
     }
 
     .dropdown i {
-        right: 5%; 
+        right: 5%;
     }
 
     .hero-content {
@@ -1365,7 +1371,7 @@ footer button:hover{
         font-size: 6rem;
         letter-spacing: 10px;
     }
-    
+
     .hero-detail {
         font-size: 1.4rem;
         letter-spacing: 1px;
@@ -1423,7 +1429,7 @@ footer button:hover{
     }
 
     .box-drink-img {
-        padding-right: 0!important;
+        padding-right: 0 !important;
     }
 
     .menu-item-name {
@@ -1479,5 +1485,5 @@ footer button:hover{
     footer button {
         padding: 0 1.5rem;
     }
-    
+
 }
